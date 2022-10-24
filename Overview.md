@@ -1,9 +1,8 @@
 # CPU load
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -22,10 +21,9 @@ match sys.cpu_load_aggregate() {
 
 # CPU temperature
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -37,10 +35,9 @@ match sys.cpu_temp() {
 
 # Load Average
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -52,10 +49,9 @@ match sys.load_average() {
 
 # Memory info
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -69,10 +65,9 @@ match sys.memory() {
 
 # Boot Time
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -84,10 +79,9 @@ match sys.boot_time() {
 
 # Uptime
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -99,10 +93,9 @@ match sys.uptime() {
 
 # AC adapter status
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -114,10 +107,9 @@ match sys.on_ac_power() {
 
 # Battery life
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -132,10 +124,9 @@ match sys.battery_life() {
 
 # Swap
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -149,10 +140,9 @@ match sys.swap() {
 
 # Disk mounts
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -172,10 +162,9 @@ match sys.mounts() {
 
 # Disk mount info
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -192,10 +181,9 @@ match sys.mount_at("/") {
 
 # Block device statistics
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -211,10 +199,9 @@ match sys.block_device_statistics() {
 
 # Network interfaces
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -231,10 +218,9 @@ match sys.networks() {
 
 # Network traffic statistics
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
@@ -251,10 +237,9 @@ match sys.networks() {
 
 # Socket info
 
-  --------- ------- --------- -------- ------- --------
   FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  ❌        ❌      ❌        ❌       ❌      ❌
   --------- ------- --------- -------- ------- --------
+  ❌        ❌      ❌        ❌       ❌      ❌
 
 ``` rust
 let sys = System::new();
