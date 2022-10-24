@@ -1,11 +1,9 @@
-# CPU load
+* CPU load
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-      FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --- --------- ------- --------- -------- ------- --------
-  /   \<\>      \<                \>       \<      \>
-      ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.cpu_load_aggregate() {
     Ok(cpu)=> {
@@ -18,43 +16,37 @@ match sys.cpu_load_aggregate() {
     },
     Err(x) => println!("CPU load: error: {}", x)
 }
-```
+#+end_src
+* CPU temperature
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# CPU temperature
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.cpu_temp() {
     Ok(cpu_temp) => println!("CPU temperature: {}", cpu_temp),
     Err(x) => println!("CPU temperature: {}", x)
 }
-```
+#+end_src
+* Load Average
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Load Average
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.load_average() {
     Ok(loadavg) => println!("Load average: {} {} {}", loadavg.one, loadavg.five, loadavg.fifteen),
     Err(x) => println!("Load average: error: {}", x)
 }
-```
+#+end_src
+* Memory info
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Memory info
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.memory() {
     Ok(mem) => println!("Memory: {} used / {} ({} bytes) total ({:?})",
@@ -62,57 +54,49 @@ match sys.memory() {
                         mem.total, mem.total.as_u64(), mem.platform_memory),
     Err(x) => println!("Memory: error: {}", x)
 }
-```
+#+end_src
+* Boot Time
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Boot Time
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.boot_time() {
     Ok(boot_time) => println!("Boot time: {}", boot_time),
     Err(x) => println!("Boot time: error: {}", x)
 }
-```
+#+end_src
+* Uptime
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Uptime
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.uptime() {
     Ok(uptime) => println!("Uptime: {:?}", uptime),
     Err(x) => println!("Uptime: error: {}", x)
 }
-```
+#+end_src
+* AC adapter status
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# AC adapter status
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.on_ac_power() {
     Ok(power) => println!("AC adapter status: {}", power),
     Err(x) => println!("AC adapter status: error: {}", x)
 }
-```
+#+end_src
+* Battery life
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Battery life
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.battery_life() {
     Ok(bat) => print!("Battery: {}%, {}h{}m remaining",
@@ -121,15 +105,13 @@ match sys.battery_life() {
                       bat.remaining_time.as_secs() % 60),
     Err(x) => print!("Battery: error: {}", x)
 }
-```
+#+end_src
+* Swap
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Swap
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.swap() {
     Ok(swap) => println!("Swap: {} used / {} ({} bytes) total ({:?})",
@@ -137,15 +119,13 @@ match sys.swap() {
                          swap.total, swap.total.as_u64(), swap.platform_swap),
     Err(x) => println!("Swap: error: {}", x)
 }
-```
+#+end_src
+* Disk mounts
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Disk mounts
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.mounts() {
     Ok(mounts) => {
@@ -159,15 +139,13 @@ match sys.mounts() {
     Err(x) => println!("\nMounts: error: {}", x)
 }
 
-```
+#+end_src
+* Disk mount info
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Disk mount info
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.mount_at("/") {
     Ok(mount) => {
@@ -178,15 +156,13 @@ match sys.mount_at("/") {
     }
     Err(x) => println!("\nMount at /: error: {}", x)
 }
-```
+#+end_src
+* Block device statistics
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Block device statistics
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.block_device_statistics() {
     Ok(stats) => {
@@ -196,15 +172,13 @@ match sys.block_device_statistics() {
     }
     Err(x) => println!("Block statistics error: {}", x)
 }
-```
+#+end_src
+* Network interfaces
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Network interfaces
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.networks() {
     Ok(netifs) => {
@@ -215,15 +189,13 @@ match sys.networks() {
     }
     Err(x) => println!("Networks: error: {}", x)
 }
-```
+#+end_src
+* Network traffic statistics
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Network traffic statistics
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.networks() {
     Ok(netifs) => {
@@ -234,20 +206,17 @@ match sys.networks() {
     }
     Err(x) => println!("Networks: error: {}", x)
 }
-```
+#+end_src
+* Socket info
+| FreeBSD | Linux | OpenBSD | Window | MacOS | NetBSD |
+|---------+-------+---------+--------+-------+--------|
+| ❌      | ❌    | ❌      | ❌     | ❌    | ❌     |
 
-# Socket info
-
-  FreeBSD   Linux   OpenBSD   Window   MacOS   NetBSD
-  --------- ------- --------- -------- ------- --------
-  ❌        ❌      ❌        ❌       ❌      ❌
-
-``` rust
+#+begin_src rust
 let sys = System::new();
 match sys.socket_stats() {
     Ok(stats) => println!("System socket statistics: {:?}", stats),
     Err(x) => println!("System socket statistics: error: {}", x)
 }
-```
-
-\*
+#+end_src
+*
